@@ -2,8 +2,9 @@
 // Tạo chương trình giải bài tập 11, 12, 13;
 
 // 1. Kiểm tra 1 số nguyên có phải là số nguyên tố không;
-int isPrime(int n, int isTrue)
+int isPrime(int n)
 {
+    int isTrue = 1;
 
     if (n <= 1) // Loại 0 và 1 vì số nguyên tố luôn lớn hơn 1;
     {
@@ -34,7 +35,7 @@ int isPrime(int n, int isTrue)
 // Tạo hàm in kết quả vì hàm int chỉ trả về số;
 void printPrimeNums(int n)
 {
-    if (isPrime(n, 1))
+    if (isPrime(n))
     {
         printf("%d is a prime number.\n", n);
     }
@@ -50,7 +51,7 @@ void primeNumbers(int n)
     printf("Prime numbers up to %d: ", n);
     for (int i = 2; i < n; i++)
     {
-        if (isPrime(i, 1))
+        if (isPrime(i))
         {
             printf("%d ", i);
         }
