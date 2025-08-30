@@ -123,19 +123,22 @@ int main()
         switch (choice)
         {
         case 1: // Kiểm tra xem n có phải số nguyên tố không;
+            printf("You choose option 1.\n");
             n = getInt("Enter a number: ");
             printPrimeNums(n); // Gọi hàm printPrimeNums;
             break;
         case 2: // In ra dãy số nguyên tố từ 2 -> n - 1
+            printf("You choose option 2.\n");
             n = getInt("Enter a number: ");
             primeNumbers(n);
             break;
         case 3: // In ra dãy Fibonacci với n số hạng;
+            printf("You choose option 3.\n");
             n = getInt("Enter a number: ");
             fibonacciSequence(n);
             break;
         case 0: // Thoát chương trình
-            printf("Closing the program.\n");
+            printf("Closing the program.....\n");
             printf("Program closed.");
             return 0;
         }
