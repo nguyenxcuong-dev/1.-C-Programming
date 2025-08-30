@@ -1,6 +1,26 @@
 #include <stdio.h>
 // Tạo chương trình giải bài tập 11, 12, 13;
 
+// Tạo hàm nhập số nguyên
+int getInt (const char* notification)
+{
+    int value, check;
+    while (1)
+    {
+        printf("%s", notification);
+        check = scanf("%d", &value);
+        if (check == 1)
+        {
+            while (getchar() != '\n'); // Dọn bộ đệm sau khi nhập đúng 
+            return value;
+        }
+        else {
+            printf("Invalid input! Please enter a number.\n");
+            while (getchar() != '\n');
+        }
+    }
+}
+
 // 1. Kiểm tra 1 số nguyên có phải là số nguyên tố không;
 int isPrime(int n)
 {
@@ -83,7 +103,7 @@ void fibonacciSequence(int n)
 
 int main()
 {
-    int choice;
+    int choice, check;
     int n;
     printf("--------------------MENU--------------------\n");
     printf("CHOICE:\n");
@@ -95,24 +115,20 @@ int main()
 
     while (1) // Lặp lại chương trình đến khi nào người dùng ấn phím 0 để thoát
     {
-        printf("Enter your choice (0 - 3): ");
-        scanf("%d", &choice);
+        choice = getInt("Enter your choice (0 - 3): ");
 
         switch (choice)
         {
         case 1: // Kiểm tra xem n có phải số nguyên tố không;
-            printf("Enter number you want to check: ");
-            scanf("%d", &n);
+            n = getInt("Enter a number: ");
             printPrimeNums(n); // Gọi hàm printPrimeNums;
             break;
         case 2: // In ra dãy số nguyên tố từ 2 -> n - 1
-            printf("Enter a number: ");
-            scanf("%d", &n);
+            n = getInt("Enter a number: ");
             primeNumbers(n);
             break;
         case 3: // In ra dãy Fibonacci với n số hạng;
-            printf("Enter a number: ");
-            scanf("%d", &n);
+            n = getInt("Enter a number: ");
             fibonacciSequence(n);
             break;
         case 0: // Thoát chương trình
