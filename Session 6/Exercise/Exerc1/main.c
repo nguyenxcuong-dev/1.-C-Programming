@@ -2,7 +2,7 @@
 // Tạo chương trình giải bài tập 11, 12, 13;
 
 // Tạo hàm nhập số nguyên
-int getInt (const char* notification)
+int getInt(const char *notification)
 {
     int value, check;
     while (1)
@@ -11,12 +11,15 @@ int getInt (const char* notification)
         check = scanf("%d", &value);
         if (check == 1)
         {
-            while (getchar() != '\n'); // Dọn bộ đệm sau khi nhập đúng 
+            while (getchar() != '\n')
+                ; // Dọn bộ đệm sau khi nhập đúng
             return value;
         }
-        else {
+        else
+        {
             printf("Invalid input! Please enter a number.\n");
-            while (getchar() != '\n');
+            while (getchar() != '\n')
+                ;
         }
     }
 }
@@ -93,7 +96,7 @@ void fibonacciSequence(int n)
         for (int i = 1; i <= n; i++)
         {
             printf("%lld ", num1); // In ra số đầu tiên
-            nextNumber = num1 + num2; 
+            nextNumber = num1 + num2;
             num1 = num2;
             num2 = nextNumber;
         }
