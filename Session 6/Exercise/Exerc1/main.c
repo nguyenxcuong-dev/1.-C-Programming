@@ -11,8 +11,7 @@ int getInt(const char *notification)
         check = scanf("%d", &value);
         if (check == 1)
         {
-            while (getchar() != '\n')
-                ; // Dọn bộ đệm sau khi nhập đúng
+            while (getchar() != '\n'); // Dọn bộ đệm sau khi nhập đúng
             return value;
         }
         else
