@@ -84,7 +84,7 @@ int maxOfTwo(int a, int b)
 int sumOneToN(int n)
 {
     int summary = 0;
-    for (int i = 0; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         summary += i;
     }
