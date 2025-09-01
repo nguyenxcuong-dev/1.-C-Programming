@@ -116,7 +116,7 @@ int main()
     printf("* 5. Factorial.                                  *\n"); // Task 5;
     printf("** * * * * * * * * * * * * * * * * * * * * * * * *\n");
 
-    while (1)
+    while (1) // Lặp lại cho đến khi người dùng nhập 0 để thoát chương trình
     {
         choice = isInt("Enter your choice (0 - 5): ");
 
