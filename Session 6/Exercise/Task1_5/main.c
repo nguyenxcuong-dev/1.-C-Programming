@@ -114,6 +114,7 @@ int main()
     printf("* 3. The greatest of two numbers.                *\n"); // Task 3;
     printf("* 4. Calculate the sum of numbers from 1 to n.   *\n"); // Task 4;
     printf("* 5. Factorial.                                  *\n"); // Task 5;
+    printf("* 0. Exit.                                       *\n");
     printf("** * * * * * * * * * * * * * * * * * * * * * * * *\n");
 
     while (1) // Lặp lại cho đến khi người dùng nhập 0 để thoát chương trình

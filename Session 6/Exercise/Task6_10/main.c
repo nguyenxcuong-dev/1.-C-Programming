@@ -148,6 +148,7 @@ int main()
     printf("3. Calculate the sum of the digits of an integer.\n"); // Task 8
     printf("4. Check if n is a square number.\n");                 // Task 9
     printf("5. Check if a year is a leap year or not.\n");         // Task 10
+    printf("0. Exit.\n");
     printf("--------------------------------------------------\n");
 
     while (1)
