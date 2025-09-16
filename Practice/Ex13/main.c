@@ -52,6 +52,7 @@ int main()
             {
                 printf("Invalid value. Please enter a number.\n");
                 while (getchar() != '\n');
+                i--;
             }
         }
         rotateRight(array, n, k);
